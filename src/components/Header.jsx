@@ -13,17 +13,21 @@ export const Headers = ({
   const [getactive, setActive] = useState(false);
   
   const onDeleteProduct = (product) => {
+    const confirmed = window.confirm('¿Estás seguro de que deseas eliminar este artículo del carrito?');
+    if(confirmed){
     const results = getAllProducts.filter((item) => item.id !== product.id);
-
+    
     setTotal(getTotal - product.price * product.quantity);
     setCountProducts(getCountProducts - product.quantity);
     setAllProducts(results);
-  };
+  }};
   const onCleanCart = () => {
+    const confirmed = window.confirm('¿Estás seguro de que vaciar el carrito?');
+    if(confirmed){
     setAllProducts([]);
     setTotal(0);
     setCountProducts(0);
-  };
+  }};
 
   return (
     <header>
