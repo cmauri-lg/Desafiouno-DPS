@@ -1,5 +1,5 @@
 import React from "react";
-import { data } from "../app/data";
+import { data } from "../data.js";
 export const ProductList = () => {
   return (
     <div className="container-items">
