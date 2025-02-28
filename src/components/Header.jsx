@@ -25,7 +25,7 @@ export const Headers = ({
     }
   };
   const onCleanCart = () => {
-    const confirmed = window.confirm("¿Estás seguro de que vaciar el carrito?");
+    const confirmed = window.confirm("¿Estás seguro de vaciar el carrito?");
     if (confirmed) {
       setAllProducts([]);
       setTotal(0);
