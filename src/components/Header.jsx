@@ -46,8 +46,11 @@ export const Headers = ({
           <div className="row-product">
             {getAllProducts.map(product =>(
               <div className='cart-product' key = {product.id}>
-              <div className='info-cart-product'> 
-                <span className='cantidad-producto-carrito'> {product.quantity} </span> 
+              <div className='info-cart-product'>
+                <figure className="tamanho">
+                  <img className="tamanho" src={product.urlImage} />
+                </figure>
+                <span className='cantidad-producto-carrito'> {product.quantity} </span>
                 <p className='titulo-producto-carrito'> {product.title} </p> 
                 <span className='precio-producto-carrito'> ${product.price} </span> 
                 </div>
